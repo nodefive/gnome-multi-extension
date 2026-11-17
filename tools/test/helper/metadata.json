@@ -1,0 +1,7 @@
+{
+  "uuid": "st-test-helper@local",
+  "name": "Shell Tweaks test helper",
+  "description": "TEST ONLY. Puts the Shell into unsafe mode so the headless test can use Eval. Never install in a real session.",
+  "shell-version": ["50", "51"],
+  "version": 1
+}

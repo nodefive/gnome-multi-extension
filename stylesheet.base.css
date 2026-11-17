@@ -1,0 +1,167 @@
+/* SPDX-License-Identifier: GPL-3.0-only
+ * Rules ported from Just Perfection (GPL-3.0-only) and app-grid-tuner.
+ * stylesheet.css is generated from this file by tools/gen-stylesheet.sh. */
+
+/* compact shell theme (shell-theme) */
+.shell-tweaks-theme { font-size: small; }
+.shell-tweaks-theme .switcher-popup { padding: 8px; spacing: 24px; font-size: small; }
+.shell-tweaks-theme .switcher-list {
+    color: #eeeeec;
+    background-color: rgba(0, 0, 0, .99);
+    border: 0 solid rgba(255, 255, 255, .16);
+    border-radius: 15px;
+    padding: 12px;
+    box-shadow: none;
+}
+.shell-tweaks-theme .switcher-list .item-box {
+    padding: 8px;
+    border-radius: 14px;
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+.shell-tweaks-theme .switcher-list .item-box:outlined {
+    border: 0;
+    background-color: rgba(255, 255, 255, .1);
+    box-shadow: inset 0 2px 2px 0 rgba(0, 0, 0, .4);
+}
+.shell-tweaks-theme .switcher-list .item-box:selected { background-color: #404040; color: #eeeeec; }
+.shell-tweaks-theme .switcher-list .thumbnail-box { padding: 2px; spacing: 6px; }
+.shell-tweaks-theme .switcher-list .thumbnail { width: 256px; }
+.shell-tweaks-theme .switcher-list .separator { width: 1px; background: #272727; }
+.shell-tweaks-theme .switcher-list .switcher-list-item-container { spacing: 12px; }
+.shell-tweaks-theme .workspace-switcher-container {
+    background-color: rgba(0, 0, 0, .7);
+    box-shadow: none;
+    padding: 3px;
+    border: 0;
+    border-radius: 3px;
+}
+.shell-tweaks-theme .workspace-switcher {
+    background: rgba(0, 0, 0, .7);
+    box-shadow: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0;
+    spacing: 4px;
+}
+.shell-tweaks-theme .ws-switcher-indicator,
+.shell-tweaks-theme .ws-switcher-indicator:active {
+    background: transparent;
+    background-color: rgba(255, 255, 255, .02);
+    height: 8px;
+    width: 20px;
+    border: 0;
+    border-radius: 2px;
+    padding: 2px;
+    margin: 5px;
+}
+.shell-tweaks-theme .ws-switcher-indicator:active { background-color: rgba(255, 255, 255, .8); }
+.shell-tweaks-theme .osd-window {
+    background-color: rgba(0, 0, 0, 1);
+    border: 0;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: none;
+}
+.shell-tweaks-theme .osd-window StIcon { width: 22px; height: 22px; }
+.shell-tweaks-theme .tile-preview {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 0;
+}
+
+/* accent colour icons */
+.shell-tweaks-accent-color-icon StIcon { color: -st-accent-color; }
+.shell-tweaks-accent-color-icon #panelActivities .workspace-dot { background-color: -st-accent-color; }
+.shell-tweaks-accent-color-icon .quick-toggle-menu .icon.active,
+.shell-tweaks-accent-color-icon .quick-toggle:checked StIcon,
+.shell-tweaks-accent-color-icon .quick-menu-toggle .quick-toggle-arrow:checked StIcon { color: -st-accent-fg-color; }
+
+/* panel */
+.shell-tweaks-no-panel #panel { background-color: transparent; }
+.shell-tweaks-bottom-panel #overview { margin-bottom: 24px; }
+.shell-tweaks-bottom-panel .popup-menu.panel-menu { margin-bottom: 0; }
+.shell-tweaks-bottom-panel.shell-tweaks-no-panel #overview { margin-bottom: 0; }
+.shell-tweaks-no-panel-notification-icon .clock-display StIcon { width: 0; height: 0; padding: 0; }
+.shell-tweaks-no-panel-notification-icon .clock-display-box { padding: 0; spacing: 0; }
+.shell-tweaks-no-power-icon .power-status StIcon { width: 0; height: 0; padding: 0; }
+
+.shell-tweaks-no-weather .weather-button,
+.shell-tweaks-no-weather .weather-button *,
+.shell-tweaks-no-events-button .events-button,
+.shell-tweaks-no-events-button .events-button *,
+.shell-tweaks-no-screen-sharing-indicator .screen-sharing-indicator,
+.shell-tweaks-no-screen-sharing-indicator .screen-sharing-indicator *,
+.shell-tweaks-no-screen-recording-indicator .screen-recording-indicator,
+.shell-tweaks-no-screen-recording-indicator .screen-recording-indicator * {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    height: 0;
+    width: 0;
+}
+
+/* forces a restyle for properties that do not trigger one themselves */
+.shell-tweaks-refresh-styles .panel-button,
+.shell-tweaks-refresh-styles .panel-status-indicators-box,
+.shell-tweaks-refresh-styles .panel-button StIcon,
+.shell-tweaks-refresh-styles .system-status-icon {
+    background-color: gold;
+    color: gold;
+    border-radius: 100px;
+}
+
+/* overview */
+.shell-tweaks-no-search #overview { spacing: 0; }
+.shell-tweaks-no-search .overview-controls { padding-top: 36px; padding-bottom: 36px; }
+.shell-tweaks-no-window-picker-icon .icon-dropshadow { width: 0; height: 0; padding: 0; }
+.shell-tweaks-no-show-apps-button .show-apps,
+.shell-tweaks-no-show-apps-button .show-apps StIcon { width: 0; margin: 0; spacing: 0; }
+.shell-tweaks-no-window-caption .window-caption {
+    spacing: 0;
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    font-size: 0;
+}
+.shell-tweaks-no-window-close .window-close {
+    height: 0;
+    width: 30px;
+    background: transparent;
+    border-radius: 0;
+    border: 0;
+    spacing: 0;
+    box-shadow: none;
+}
+.shell-tweaks-no-dash-app-running-dot #dash .app-well-app-running-dot,
+.shell-tweaks-no-dash-app-running-dot #dash .app-grid-running-dot {
+    width: 0;
+    height: 0;
+    spacing: 0;
+    padding: 0;
+    margin: 0;
+}
+.shell-tweaks-no-workspaces-in-app-grid .workspace-background {
+    background-color: transparent;
+    box-shadow: 0 4px 16px 4px transparent;
+}
+
+/* shell */
+.shell-tweaks-osd-position-top .osd-window { margin: 4em 2.5em; }
+.shell-tweaks-osd-position-center .osd-window { margin: 4em 3.5em; }
+.shell-tweaks-osd-position-bottom .osd-window { margin: 4em 3em; }
+
+/* app grid folders */
+.shell-tweaks-hide-folder-title .folder-name-container,
+.shell-tweaks-hide-folder-title .folder-name-entry,
+.shell-tweaks-hide-folder-title .folder-name-label,
+.shell-tweaks-hide-folder-title .edit-folder-button {
+    height: 0;
+    min-height: 0;
+    max-height: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+}

@@ -1,0 +1,13 @@
+{
+  "uuid": "shell-tweaks@unl0cker",
+  "name": "Shell Tweaks",
+  "description": "Panel, overview, app grid, app menu, hot corner, workspace, window and wallpaper tweaks in one extension, each feature switchable.",
+  "shell-version": [
+    "50",
+    "51"
+  ],
+  "settings-schema": "org.gnome.shell.extensions.shell-tweaks",
+  "url": "https://github.com/nodefive/gnome-multi-extension",
+  "version": 1,
+  "version-name": "0.2.0"
+}

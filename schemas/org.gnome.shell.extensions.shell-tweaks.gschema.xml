@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.shell-tweaks" path="/org/gnome/shell/extensions/shell-tweaks/">
+
+    <!-- Modules. Defaults are GNOME's own behaviour: a module whose features
+         all sit at their defaults changes nothing. Modules that always change
+         the Shell when on (app grid, hot corners, wallpaper) start off. -->
+    <key name="module-panel" type="b"><default>true</default><summary>Panel</summary></key>
+    <key name="module-date-menu" type="b"><default>true</default><summary>Date menu</summary></key>
+    <key name="module-overview" type="b"><default>true</default><summary>Overview</summary></key>
+    <key name="module-app-grid" type="b"><default>false</default><summary>App grid layout</summary></key>
+    <key name="module-app-menu" type="b"><default>true</default><summary>App menu and hiding</summary></key>
+    <key name="module-hot-corners" type="b"><default>false</default><summary>Hot corners</summary></key>
+    <key name="module-workspaces" type="b"><default>true</default><summary>Workspaces</summary></key>
+    <key name="module-windows" type="b"><default>true</default><summary>Windows and switcher</summary></key>
+    <key name="module-shell" type="b"><default>true</default><summary>Shell</summary></key>
+    <key name="module-wallpaper" type="b"><default>false</default><summary>Wallpaper button</summary></key>
+
+    <!-- Panel -->
+    <key name="panel-visible" type="b"><default>true</default><summary>Show the top panel</summary></key>
+    <key name="panel-in-overview" type="b"><default>false</default><summary>Show the hidden panel in the overview</summary></key>
+    <key name="panel-position" type="i"><range min="0" max="1"/><default>0</default><summary>Panel position</summary><description>0 top, 1 bottom</description></key>
+    <key name="panel-size" type="i"><range min="0" max="64"/><default>0</default><summary>Panel height</summary><description>0 uses the theme</description></key>
+    <key name="panel-activities-button" type="b"><default>true</default><summary>Activities button</summary></key>
+    <key name="panel-clock-menu" type="b"><default>true</default><summary>Clock menu</summary></key>
+    <key name="panel-clock-menu-position" type="i"><range min="0" max="2"/><default>0</default><summary>Clock menu box</summary><description>0 center, 1 right, 2 left</description></key>
+    <key name="panel-clock-menu-position-offset" type="i"><range min="0" max="20"/><default>0</default><summary>Clock menu position in its box</summary></key>
+    <key name="panel-keyboard-layout" type="b"><default>true</default><summary>Keyboard layout indicator</summary></key>
+    <key name="panel-accessibility-menu" type="b"><default>true</default><summary>Accessibility menu</summary></key>
+    <key name="panel-quick-settings" type="b"><default>true</default><summary>Quick settings menu</summary></key>
+    <key name="panel-power-icon" type="b"><default>true</default><summary>Power icon</summary></key>
+    <key name="panel-notification-icon" type="b"><default>true</default><summary>Notification dot next to the clock</summary></key>
+    <key name="panel-screen-sharing-indicator" type="b"><default>true</default><summary>Screen sharing indicator</summary></key>
+    <key name="panel-screen-recording-indicator" type="b"><default>true</default><summary>Screen recording indicator</summary></key>
+    <key name="panel-button-padding-size" type="i"><range min="0" max="61"/><default>0</default><summary>Panel button padding</summary><description>0 theme, 1 none, 2-61 padding in px minus one</description></key>
+    <key name="panel-indicator-padding-size" type="i"><range min="0" max="61"/><default>0</default><summary>Panel indicator spacing</summary><description>0 theme, 1 none, 2-61 spacing in px minus one</description></key>
+    <key name="panel-icon-size" type="i"><range min="0" max="60"/><default>0</default><summary>Panel icon size</summary><description>0 uses the theme</description></key>
+    <key name="qs-airplane-mode" type="b"><default>true</default><summary>Airplane mode toggle</summary></key>
+    <key name="qs-dark-mode" type="b"><default>true</default><summary>Dark style toggle</summary></key>
+    <key name="qs-night-light" type="b"><default>true</default><summary>Night light toggle</summary></key>
+    <key name="qs-backlight" type="b"><default>true</default><summary>Keyboard backlight toggle</summary></key>
+    <key name="qs-do-not-disturb" type="b"><default>true</default><summary>Do not disturb toggle</summary></key>
+
+    <!-- Date menu -->
+    <key name="date-menu-calendar" type="b"><default>true</default><summary>Calendar</summary></key>
+    <key name="date-menu-events-button" type="b"><default>true</default><summary>Events</summary></key>
+    <key name="date-menu-world-clock" type="b"><default>true</default><summary>World clocks</summary></key>
+    <key name="date-menu-weather" type="b"><default>true</default><summary>Weather</summary></key>
+    <key name="date-menu-invert-columns" type="b"><default>false</default><summary>Invert calendar column order</summary></key>
+    <key name="date-menu-hide-message-list" type="b"><default>false</default><summary>Hide the message list</summary><description>The clock menu shows only the calendar column</description></key>
+    <key name="date-menu-hide-scope" type="s">
+      <choices><choice value="whole-list"/><choice value="notifications-only"/></choices>
+      <default>'whole-list'</default>
+      <summary>What to hide</summary>
+      <description>whole-list hides notifications and media controls; notifications-only keeps media controls</description>
+    </key>
+
+    <!-- Overview -->
+    <key name="overview-startup-status" type="i"><range min="0" max="1"/><default>1</default><summary>After login show</summary><description>0 desktop, 1 overview</description></key>
+    <key name="overview-search" type="b"><default>true</default><summary>Search entry</summary></key>
+    <key name="overview-type-to-search" type="b"><default>true</default><summary>Type to search</summary></key>
+    <key name="overview-hide-search-until-typing" type="b"><default>false</default><summary>Hide the search entry until typing</summary></key>
+    <key name="overview-max-search-results" type="i"><range min="0" max="24"/><default>0</default><summary>Maximum search results per provider</summary><description>0 uses the default</description></key>
+    <key name="overview-dash" type="b"><default>true</default><summary>Dash</summary></key>
+    <key name="overview-dash-app-running" type="b"><default>true</default><summary>Running app dot in the dash</summary></key>
+    <key name="overview-show-apps-button" type="b"><default>true</default><summary>Show apps button</summary></key>
+    <key name="overview-workspace-switcher" type="b"><default>true</default><summary>Workspace thumbnails</summary></key>
+    <key name="overview-workspace-switcher-should-show" type="b"><default>false</default><summary>Always show workspace thumbnails</summary></key>
+    <key name="overview-workspace-switcher-size" type="i"><range min="0" max="100"/><default>0</default><summary>Workspace thumbnail size (percent)</summary><description>0 uses the default</description></key>
+    <key name="overview-workspace-peek" type="b"><default>true</default><summary>Peek at adjacent workspaces</summary></key>
+    <key name="overview-workspace-thumbnail-to-main-view" type="b"><default>false</default><summary>Thumbnail click leaves the overview</summary></key>
+    <key name="overview-workspaces-in-app-grid" type="b"><default>true</default><summary>Workspaces above the app grid</summary></key>
+    <key name="overview-window-picker-icon" type="b"><default>true</default><summary>App icon under window previews</summary></key>
+    <key name="overview-window-preview-caption" type="b"><default>true</default><summary>Window preview caption</summary></key>
+    <key name="overview-window-preview-close-button" type="b"><default>true</default><summary>Window preview close button</summary></key>
+    <key name="overview-controls-spacing-size" type="i"><range min="0" max="150"/><default>0</default><summary>Overview controls spacing</summary><description>0 uses the theme</description></key>
+    <key name="overview-workspace-background-corner-size" type="i"><range min="0" max="61"/><default>0</default><summary>Workspace corner radius</summary><description>0 theme, 1 square, 2-61 radius in px minus one</description></key>
+    <key name="overview-firefox-pip" type="b"><default>false</default><summary>Show Firefox picture-in-picture windows</summary></key>
+    <key name="overview-super-key" type="b"><default>true</default><summary>Super key opens the overview</summary></key>
+    <key name="overview-double-super-to-app-grid" type="b"><default>true</default><summary>Double Super opens the app grid</summary></key>
+    <key name="overview-super-opens-app-grid" type="b"><default>false</default><summary>Super opens the app grid</summary><description>Only the Super key; hot corners and other callers keep the window overview</description></key>
+    <key name="overview-click-empty-to-close" type="b"><default>false</default><summary>Click empty space to close the overview</summary></key>
+    <key name="overview-click-clears-search-first" type="b"><default>false</default><summary>First click clears an active search</summary></key>
+
+    <!-- App grid (module-app-grid) -->
+    <key name="app-grid-max-columns" type="i"><range min="1" max="16"/><default>6</default><summary>Columns</summary></key>
+    <key name="app-grid-max-rows" type="i"><range min="1" max="12"/><default>4</default><summary>Rows</summary></key>
+    <key name="app-grid-icon-size" type="i"><range min="16" max="256"/><default>64</default><summary>Icon size</summary></key>
+    <key name="app-grid-side-padding" type="i"><range min="-200" max="400"/><default>0</default><summary>Side padding</summary></key>
+    <key name="app-grid-icon-font-size" type="d"><range min="0" max="40"/><default>0</default><summary>Label font size</summary><description>0 uses the theme</description></key>
+    <key name="app-grid-label-style" type="s">
+      <choices>
+        <choice value=""/>
+        <choice value="font-weight: normal;"/>
+        <choice value="font-weight: normal; text-shadow: 2px 3px 3px #000000;"/>
+        <choice value="font-weight: bold;"/>
+        <choice value="font-weight: bold; text-shadow: 2px 3px 3px #000000;"/>
+      </choices>
+      <default>''</default>
+      <summary>Label style</summary>
+    </key>
+    <key name="app-grid-label-color" type="s"><default>''</default><summary>Label colour</summary><description>#rrggbb, empty uses the theme</description></key>
+    <key name="app-grid-label-shadow-color" type="s"><default>'#000000'</default><summary>Label shadow colour</summary></key>
+    <key name="app-grid-background-mode" type="s">
+      <choices><choice value="system"/><choice value="solid-color"/><choice value="gradient"/><choice value="image"/><choice value="wallpaper"/></choices>
+      <default>'system'</default>
+      <summary>Background</summary>
+    </key>
+    <key name="app-grid-background-tint-color" type="s"><default>'#000000'</default><summary>Image tint colour</summary><description>Laid over Image and Current wallpaper</description></key>
+    <key name="app-grid-background-tint-opacity" type="d"><range min="0" max="1"/><default>0.0</default><summary>Image tint opacity</summary><description>0: no tint</description></key>
+    <key name="app-grid-background-image" type="s"><default>''</default><summary>Background image</summary><description>Used with the Image background; scaled to cover</description></key>
+    <key name="app-grid-background-color" type="s"><default>'#0f172a'</default><summary>Background colour</summary><description>Also the gradient start colour</description></key>
+    <key name="app-grid-gradient-type" type="s">
+      <choices><choice value="linear-vertical"/><choice value="linear-horizontal"/></choices>
+      <default>'linear-vertical'</default>
+      <summary>Gradient direction</summary>
+    </key>
+    <key name="app-grid-gradient-secondary-color" type="s"><default>''</default><summary>Gradient end colour</summary><description>Empty: 20% darker than the start colour</description></key>
+    <key name="app-grid-hover-tile-enabled" type="b"><default>false</default><summary>Hover tile</summary><description>Highlight behind an app or folder icon while the pointer is over it</description></key>
+    <key name="app-grid-hover-tile-background-color" type="s"><default>'#ffffff'</default><summary>Hover tile colour</summary></key>
+    <key name="app-grid-hover-tile-background-opacity" type="d"><range min="0" max="1"/><default>0.1</default><summary>Hover tile opacity</summary></key>
+    <key name="app-grid-hover-tile-border-color" type="s"><default>''</default><summary>Hover tile border colour</summary></key>
+    <key name="app-grid-folder-max-columns" type="i"><range min="1" max="12"/><default>3</default><summary>Folder columns</summary></key>
+    <key name="app-grid-folder-max-rows" type="i"><range min="1" max="12"/><default>3</default><summary>Folder rows</summary></key>
+    <key name="app-grid-folder-icon-size" type="i"><range min="16" max="256"/><default>64</default><summary>Folder icon size</summary></key>
+    <key name="app-grid-folder-icon-font-size" type="d"><range min="0" max="40"/><default>0</default><summary>Folder label font size</summary><description>0 uses the theme</description></key>
+    <key name="app-grid-folder-item-spacing" type="i"><range min="0" max="300"/><default>78</default><summary>Folder item spacing</summary></key>
+    <key name="app-grid-folder-item-height-offset" type="i"><range min="0" max="300"/><default>72</default><summary>Folder row height offset</summary></key>
+    <key name="app-grid-folder-side-padding" type="i"><range min="0" max="200"/><default>24</default><summary>Folder side padding</summary></key>
+    <key name="app-grid-folder-popup-width" type="i"><range min="200" max="3000"/><default>640</default><summary>Minimum width (px)</summary><description>Used when the size is not fixed</description></key>
+    <key name="app-grid-folder-popup-fixed-size" type="b"><default>false</default><summary>Fixed folder popup size</summary><description>The popup is always the width and height below; icons that do not fit go to the next page</description></key>
+    <key name="app-grid-folder-popup-fixed-width" type="i"><range min="200" max="7680"/><default>640</default><summary>Fixed width (px)</summary></key>
+    <key name="app-grid-folder-popup-fixed-height" type="i"><range min="150" max="4320"/><default>480</default><summary>Fixed height (px)</summary></key>
+    <key name="app-grid-folder-popup-height-offset" type="i"><range min="0" max="600"/><default>152</default><summary>Folder popup height offset</summary></key>
+    <key name="app-grid-folder-popup-background-color" type="s"><default>''</default><summary>Folder popup colour</summary><description>Empty uses the theme</description></key>
+    <key name="app-grid-folder-popup-background-opacity" type="d"><range min="0" max="1"/><default>0.92</default><summary>Folder popup opacity</summary></key>
+    <key name="app-grid-folder-popup-border-color" type="s"><default>''</default><summary>Folder popup border colour</summary></key>
+    <key name="app-grid-folder-popup-border-radius" type="i"><range min="0" max="100"/><default>32</default><summary>Folder popup radius</summary></key>
+    <key name="app-grid-folder-tile-background-color" type="s"><default>''</default><summary>Folder background colour</summary><description>The folder square in the app grid; Theme uses the theme colour</description></key>
+    <key name="app-grid-folder-tile-background-opacity" type="d"><range min="0" max="1"/><default>0.16</default><summary>Folder background opacity</summary><description>Applies to the custom or the theme colour</description></key>
+    <key name="app-grid-folder-tile-border-color" type="s"><default>''</default><summary>Folder border colour</summary></key>
+    <key name="app-grid-folder-tile-border-radius" type="i"><range min="0" max="100"/><default>24</default><summary>Folder corner radius</summary></key>
+    <key name="app-grid-hide-folder-title" type="b"><default>false</default><summary>Hide folder title</summary></key>
+    <key name="app-grid-open-animation-time" type="i"><range min="0" max="2000"/><default>250</default><summary>Folder open animation (ms)</summary></key>
+    <key name="app-grid-page-switch-animation-time" type="i"><range min="0" max="2000"/><default>300</default><summary>Page switch animation (ms)</summary></key>
+
+    <!-- App menu and hiding -->
+    <key name="app-menu-hide-item" type="b"><default>false</default><summary>"Hide" item on app grid icons</summary></key>
+    <key name="app-menu-hide-from-search-item" type="b"><default>false</default><summary>"Hide from Search" item on app grid icons</summary></key>
+    <key name="app-menu-edit-entry-item" type="b"><default>false</default><summary>"Edit Entry" item</summary></key>
+    <key name="app-menu-open-location-item" type="b"><default>false</default><summary>"Open Entry Location" item</summary></key>
+    <key name="app-menu-hidden-apps" type="as"><default>[]</default><summary>Apps hidden from the app grid</summary></key>
+    <key name="app-menu-hidden-search-apps" type="as"><default>[]</default><summary>Apps hidden from search</summary></key>
+    <key name="app-menu-use-custom-edit-command" type="b"><default>false</default><summary>Use a custom edit command</summary></key>
+    <key name="app-menu-custom-edit-command" type="s"><default>'gapplication launch org.gnome.TextEditor %U'</default><summary>Custom edit command</summary><description>%U is replaced by the file path</description></key>
+    <key name="app-menu-edit-local-copy" type="b"><default>true</default><summary>Edit a user copy of system entries</summary><description>Copies the entry to ~/.local/share/applications first</description></key>
+
+    <!-- Hot corners (module-hot-corners) -->
+    <key name="hot-corners-enabled" type="b"><default>true</default><summary>Corners active</summary></key>
+    <key name="hot-corners-require-shift" type="b"><default>false</default><summary>Corners require Shift</summary></key>
+    <key name="hot-corners-ripple" type="b"><default>true</default><summary>Ripple animation</summary></key>
+    <key name="hot-corners-panel-menu" type="b"><default>false</default><summary>Panel menu</summary></key>
+    <key name="hot-corners-barrier-size-h" type="i"><range min="1" max="100"/><default>1</default><summary>Horizontal barrier size (percent of width)</summary></key>
+    <key name="hot-corners-barrier-size-v" type="i"><range min="1" max="100"/><default>1</default><summary>Vertical barrier size (percent of height)</summary></key>
+    <key name="hot-corners-pressure-threshold" type="i"><range min="25" max="800"/><default>100</default><summary>Pressure threshold</summary></key>
+    <key name="hot-corners-action-delay" type="i"><range min="0" max="2000"/><default>100</default><summary>Minimum time between actions (ms)</summary></key>
+    <key name="hot-corners-corners-visible" type="b"><default>false</default><summary>Show corner barriers (debug)</summary></key>
+    <key name="hot-corners-barrier-fallback" type="b"><default>false</default><summary>Use a 3px reactive area instead of pressure barriers</summary></key>
+    <key name="hot-corners-top-left-action" type="s"><default>'disabled'</default><summary>Top left: action</summary></key>
+    <key name="hot-corners-top-left-command" type="s"><default>''</default><summary>Top left: command</summary></key>
+    <key name="hot-corners-top-left-fullscreen" type="b"><default>true</default><summary>Top left: active in fullscreen</summary></key>
+    <key name="hot-corners-top-left-ctrl-action" type="s"><default>'disabled'</default><summary>Top left: action with Ctrl</summary></key>
+    <key name="hot-corners-top-left-ctrl-command" type="s"><default>''</default><summary>Top left: command with Ctrl</summary></key>
+    <key name="hot-corners-top-left-ctrl-fullscreen" type="b"><default>true</default><summary>Top left: Ctrl action active in fullscreen</summary></key>
+    <key name="hot-corners-top-right-action" type="s"><default>'disabled'</default><summary>Top right: action</summary></key>
+    <key name="hot-corners-top-right-command" type="s"><default>''</default><summary>Top right: command</summary></key>
+    <key name="hot-corners-top-right-fullscreen" type="b"><default>true</default><summary>Top right: active in fullscreen</summary></key>
+    <key name="hot-corners-top-right-ctrl-action" type="s"><default>'disabled'</default><summary>Top right: action with Ctrl</summary></key>
+    <key name="hot-corners-top-right-ctrl-command" type="s"><default>''</default><summary>Top right: command with Ctrl</summary></key>
+    <key name="hot-corners-top-right-ctrl-fullscreen" type="b"><default>true</default><summary>Top right: Ctrl action active in fullscreen</summary></key>
+    <key name="hot-corners-bottom-left-action" type="s"><default>'disabled'</default><summary>Bottom left: action</summary></key>
+    <key name="hot-corners-bottom-left-command" type="s"><default>''</default><summary>Bottom left: command</summary></key>
+    <key name="hot-corners-bottom-left-fullscreen" type="b"><default>true</default><summary>Bottom left: active in fullscreen</summary></key>
+    <key name="hot-corners-bottom-left-ctrl-action" type="s"><default>'disabled'</default><summary>Bottom left: action with Ctrl</summary></key>
+    <key name="hot-corners-bottom-left-ctrl-command" type="s"><default>''</default><summary>Bottom left: command with Ctrl</summary></key>
+    <key name="hot-corners-bottom-left-ctrl-fullscreen" type="b"><default>true</default><summary>Bottom left: Ctrl action active in fullscreen</summary></key>
+    <key name="hot-corners-bottom-right-action" type="s"><default>'disabled'</default><summary>Bottom right: action</summary></key>
+    <key name="hot-corners-bottom-right-command" type="s"><default>''</default><summary>Bottom right: command</summary></key>
+    <key name="hot-corners-bottom-right-fullscreen" type="b"><default>true</default><summary>Bottom right: active in fullscreen</summary></key>
+    <key name="hot-corners-bottom-right-ctrl-action" type="s"><default>'disabled'</default><summary>Bottom right: action with Ctrl</summary></key>
+    <key name="hot-corners-bottom-right-ctrl-command" type="s"><default>''</default><summary>Bottom right: command with Ctrl</summary></key>
+    <key name="hot-corners-bottom-right-ctrl-fullscreen" type="b"><default>true</default><summary>Bottom right: Ctrl action active in fullscreen</summary></key>
+    <key name="hot-corners-keyboard-shortcuts" type="as"><default>[]</default><summary>Action shortcuts</summary><description>Entries of the form "action accelerator"</description></key>
+    <key name="hot-corners-custom-menu-1" type="as"><default>[]</default><summary>Custom menu 1 actions</summary></key>
+    <key name="hot-corners-custom-menu-2" type="as"><default>[]</default><summary>Custom menu 2 actions</summary></key>
+    <key name="hot-corners-custom-menu-3" type="as"><default>[]</default><summary>Custom menu 3 actions</summary></key>
+    <key name="hot-corners-custom-menu-4" type="as"><default>[]</default><summary>Custom menu 4 actions</summary></key>
+
+    <!-- Workspaces -->
+    <key name="workspaces-panel-scroll" type="b"><default>false</default><summary>Scroll on the panel to switch workspaces</summary></key>
+    <key name="workspaces-scroll-delay" type="i"><range min="0" max="500"/><default>0</default><summary>Minimum time between scroll switches (ms)</summary></key>
+    <key name="workspaces-ignore-last" type="b"><default>false</default><summary>Do not scroll into the last workspace</summary><description>Useful with dynamic workspaces</description></key>
+    <key name="workspaces-wrap-around" type="b"><default>false</default><summary>Wrap around</summary><description>Applies to keyboard and panel scroll switching</description></key>
+    <key name="workspaces-popup" type="b"><default>true</default><summary>Workspace switch popup</summary></key>
+
+    <!-- Windows -->
+    <key name="windows-switcher-popup-delay" type="b"><default>true</default><summary>Switcher popup delay</summary></key>
+    <key name="windows-alt-tab-icon-size" type="i"><range min="0" max="512"/><default>0</default><summary>Alt+Tab app icon size</summary><description>0 uses the default</description></key>
+    <key name="windows-alt-tab-small-icon-size" type="i"><range min="0" max="512"/><default>0</default><summary>Alt+Tab small app icon size</summary><description>0 uses the default</description></key>
+    <key name="windows-alt-tab-window-preview-size" type="i"><range min="0" max="512"/><default>0</default><summary>Alt+Tab window preview size</summary><description>0 uses the default</description></key>
+    <key name="windows-menu" type="b"><default>true</default><summary>Window menu</summary></key>
+    <key name="windows-menu-screenshot-item" type="b"><default>true</default><summary>"Take Screenshot" in the window menu</summary></key>
+    <key name="windows-demands-attention-focus" type="b"><default>false</default><summary>Focus windows that demand attention</summary></key>
+    <key name="windows-maximized-on-create" type="b"><default>false</default><summary>Maximize new windows</summary></key>
+    <key name="windows-restore-alt-f5" type="b"><default>false</default><summary>Keep Alt+F5 on unmaximize</summary><description>tilingshell clears the unmaximize shortcut; this puts Alt+F5 back</description></key>
+
+    <!-- Shell -->
+    <key name="shell-animation" type="i"><range min="0" max="8"/><default>1</default><summary>Animation speed</summary><description>0 off, 1 default, 2 almost none, 3 fastest, 4 faster, 5 fast, 6 slow, 7 slower, 8 slowest</description></key>
+    <key name="shell-osd" type="b"><default>true</default><summary>On-screen displays</summary></key>
+    <key name="shell-osd-position" type="i"><range min="0" max="9"/><default>0</default><summary>On-screen display position</summary><description>0 default; 1-3 top, 4-6 bottom, 7-9 middle (start, center, end)</description></key>
+    <key name="shell-notification-banner-position" type="i"><range min="0" max="5"/><default>1</default><summary>Notification banner position</summary><description>0-2 top, 3-5 bottom (start, center, end)</description></key>
+    <key name="shell-looking-glass-width" type="i"><range min="0" max="10"/><default>0</default><summary>Looking Glass width (tenths of the screen)</summary><description>0 uses the default</description></key>
+    <key name="shell-looking-glass-height" type="i"><range min="0" max="10"/><default>0</default><summary>Looking Glass height (tenths of the screen)</summary><description>0 uses the default</description></key>
+    <key name="shell-theme" type="b"><default>false</default><summary>Compact shell theme</summary><description>Flat switchers, OSD and workspace popup</description></key>
+    <key name="shell-accent-color-icon" type="b"><default>false</default><summary>Accent colour for icons</summary></key>
+    <key name="shell-background-menu" type="b"><default>true</default><summary>Desktop background menu</summary></key>
+
+    <!-- Diagnostics -->
+    <key name="debug" type="b"><default>false</default><summary>Log diagnostics to the journal</summary><description>Folder popup geometry and allocation; read with journalctl --user -f -o cat | grep shell-tweaks</description></key>
+
+    <!-- Wallpaper (module-wallpaper) -->
+    <key name="wallpaper-folder" type="s"><default>''</default><summary>Wallpaper folder</summary><description>Searched recursively; empty uses the Pictures folder</description></key>
+    <key name="wallpaper-auto-change" type="b"><default>false</default><summary>Change automatically</summary></key>
+    <key name="wallpaper-interval" type="i"><range min="1" max="1440"/><default>30</default><summary>Change interval (minutes)</summary></key>
+    <key name="wallpaper-avoid-repeat" type="b"><default>true</default><summary>Never pick the current wallpaper</summary></key>
+  </schema>
+</schemalist>

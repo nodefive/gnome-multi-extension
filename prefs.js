@@ -74,8 +74,7 @@ export default class ShellTweaksPreferences extends ExtensionPreferences {
                     'overview-search', 'overview-hide-search-until-typing', 'overview-type-to-search',
                     'overview-max-search-results',
                 ]),
-                keyedGroup('Dash', s, ['overview-dash', 'overview-dash-app-running', 'overview-show-apps-button'],
-                    'dash-to-dock replaces this dash while it runs'),
+                keyedGroup('Dash', s, ['overview-dash', 'overview-dash-app-running', 'overview-show-apps-button']),
                 keyedGroup('Workspaces', s, [
                     'overview-workspace-switcher', 'overview-workspace-switcher-should-show',
                     'overview-workspace-switcher-size', 'overview-workspace-peek',

@@ -21,7 +21,6 @@ switched on and off on its own.
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Updating and uninstalling](#updating-and-uninstalling)
-- [Compatibility with other extensions](#compatibility-with-other-extensions)
 - [Development](#development)
 - [Testing](#testing)
 - [Troubleshooting](#troubleshooting)
@@ -225,10 +224,10 @@ Available actions:
 - Window menu on or off, and its Take Screenshot item.
 - Focus windows that demand attention instead of showing a notification.
 - Maximize new windows.
-- Keep Alt+F5 on `unmaximize`. Tiling Shell clears
-  `org.gnome.desktop.wm.keybindings unmaximize` when it is enabled. Shell
-  Tweaks puts `<Alt>F5` back whenever the key changes and, on disable,
-  reverts only its own write.
+- Keep Alt+F5 on `unmaximize`. When
+  `org.gnome.desktop.wm.keybindings unmaximize` is cleared, Shell Tweaks puts
+  `<Alt>F5` back whenever the key changes and, on disable, reverts only its
+  own write.
 
 ### Shell
 
@@ -357,17 +356,6 @@ dconf reset -f /org/gnome/shell/extensions/shell-tweaks/   # optional: remove se
 Disabling reverts every change in the running session. Nothing is left
 patched.
 
-## Compatibility with other extensions
-
-| Extension | Notes |
-|---|---|
-| The eleven replaced extensions | Disable them first. They patch the same objects. |
-| Tiling Shell | Compatible. Alt+Tab and window menu changes coexist; Alt+F5 is restored by the Windows module. |
-| Dash to Dock | Compatible. The overview dash settings act on GNOME's own dash, which Dash to Dock replaces while it runs. Startup to desktop behaves the same in both. |
-| Desktop Icons NG (ding) | Compatible. Show Desktop skips desktop-type windows. |
-| User Themes | Compatible. App grid inline styles are applied over the theme. |
-| Other panel indicators | The wallpaper button stays at index 0 of the right box. |
-
 ## Development
 
 ### Layout
@@ -470,8 +458,6 @@ Shell log for each mode and the snapshots. As with any GNOME Shell, the
 headless Shell asks logind for the user's session and registers with GDM at
 startup. It watches that session for lock signals and changes nothing in it.
 
-For a visual check, `gnome-shell --devkit` needs the `mutter-devkit` package.
-
 ## Troubleshooting
 
 Errors and diagnostics go to the user journal:
@@ -487,8 +473,6 @@ journalctl --user -f -o cat | grep shell-tweaks
 - **Folder popups have the wrong size.** Turn on `debug` (Shell page,
   Diagnostics) and watch `shell-tweaks[folder]` lines: each open logs the
   requested geometry and what GNOME allocated.
-- **Alt+F5 does nothing after enabling Tiling Shell.** Turn on
-  *Keep Alt+F5 on unmaximize* in the Windows page.
 - **Hot corners do not trigger.** Raise the barrier size or lower the
   pressure threshold. In a VM or with some input drivers, pressure barriers
   do not work; turn on the 3 px fallback.
@@ -504,7 +488,6 @@ journalctl --user -f -o cat | grep shell-tweaks
   Corners - Extended.
 - *Fullscreen on new workspace* moves the window only with dynamic
   workspaces. With fixed workspaces it only makes the window fullscreen.
-- The overview dash settings have no effect while Dash to Dock runs.
 - Fixed while porting from Just Perfection 37: "type to search" off (it
   patched a method GNOME 51 no longer has), Alt+Tab sizes (the override had
   no effect), panel icon size revert, and quick settings toggle revert

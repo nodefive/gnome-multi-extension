@@ -212,7 +212,7 @@
     <key name="windows-menu-screenshot-item" type="b"><default>true</default><summary>"Take Screenshot" in the window menu</summary></key>
     <key name="windows-demands-attention-focus" type="b"><default>false</default><summary>Focus windows that demand attention</summary></key>
     <key name="windows-maximized-on-create" type="b"><default>false</default><summary>Maximize new windows</summary></key>
-    <key name="windows-restore-alt-f5" type="b"><default>false</default><summary>Keep Alt+F5 on unmaximize</summary><description>tilingshell clears the unmaximize shortcut; this puts Alt+F5 back</description></key>
+    <key name="windows-restore-alt-f5" type="b"><default>false</default><summary>Keep Alt+F5 on unmaximize</summary><description>Puts Alt+F5 back when the unmaximize shortcut is cleared</description></key>
 
     <!-- Shell -->
     <key name="shell-animation" type="i"><range min="0" max="8"/><default>1</default><summary>Animation speed</summary><description>0 off, 1 default, 2 almost none, 3 fastest, 4 faster, 5 fast, 6 slow, 7 slower, 8 slowest</description></key>

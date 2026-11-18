@@ -26,7 +26,7 @@ First public release.
   gradient, image or current wallpaper, with tint.
 - Hide from Search item and hidden-search list for the app icon menu.
 - Fixed-size folder popups.
-- Keep Alt+F5 on unmaximize when Tiling Shell clears it.
+- Keep Alt+F5 on unmaximize when the shortcut is cleared.
 - Loader that reloads the code in a running session (`tools/reload.sh`).
 - Headless test suite in an isolated GNOME Shell (`tools/test/run-headless.sh`).
 

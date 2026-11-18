@@ -48,19 +48,23 @@ disabled.
 
 ## Replaced extensions
 
-| Original | What was kept |
-|---|---|
-| Just Perfection | panel items, sizes and position, quick settings toggles, date menu column, overview elements, Alt+Tab sizes, window menu, animation speed, OSD, notification banner, Looking Glass size, compact theme |
-| gnome-ui-tune | hide the search entry until typing, show Firefox picture-in-picture in the overview |
-| start-overlay-in-application-view | the Super key opens the app grid |
-| click-to-close-overview | click empty overview space to close it |
-| Custom Hot Corners - Extended | four corners, pressure and Ctrl+pressure triggers, 36 actions, shortcuts, custom menus, panel menu |
-| scroll-workspaces | scroll on the panel to switch workspaces |
-| calendar-only | hide the message list in the date menu |
-| app-grid-tuner | app grid and folder geometry, labels, background, hover tile, animation times |
-| app-hider | Hide and Hide from Search items, hidden app lists |
-| Edit Desktop Files | Edit Entry and Open Entry Location items |
-| wallpaper-launcher | random wallpaper panel button and timer |
+| Original | What was kept | License |
+|---|---|---|
+| [Just Perfection](https://gitlab.gnome.org/jrahmatzadeh/just-perfection) | panel items, sizes and position, quick settings toggles, date menu column, overview elements, Alt+Tab sizes, window menu, animation speed, OSD, notification banner, Looking Glass size, compact theme | GPL-3.0-only |
+| [gnome-ui-tune](https://github.com/axxapy/gnome-ui-tune) | hide the search entry until typing, show Firefox picture-in-picture in the overview | GPL-3.0 |
+| [start-overlay-in-application-view](https://github.com/Hexcz/Start-Overlay-in-Application-View-for-Gnome-40-) | the Super key opens the app grid | none stated |
+| [click-to-close-overview](https://github.com/l3nn4rt/click-to-close-overview) | click empty overview space to close it | GPL-2.0-or-later |
+| [Custom Hot Corners - Extended](https://github.com/G-dH/custom-hot-corners-extended) | four corners, pressure and Ctrl+pressure triggers, 36 actions, shortcuts, custom menus, panel menu | GPL-3.0 |
+| [scroll-workspaces](https://github.com/timbertson/gnome-shell-scroll-workspaces) | scroll on the panel to switch workspaces | none stated |
+| calendar-only | hide the message list in the date menu | own work, GPL-3.0-only here |
+| [app-grid-tuner](https://codeberg.org/m-lab/app-grid-tuner) | app grid and folder geometry, labels, background, hover tile, animation times | MIT |
+| [app-hider](https://github.com/LynithDev/gnome-app-hider) | Hide and Hide from Search items, hidden app lists | GPL-2.0 |
+| [Edit Desktop Files](https://github.com/Dannflower/edit-desktop-files) | Edit Entry and Open Entry Location items | GPL-2.0-or-later |
+| wallpaper-launcher | random wallpaper panel button and timer | own work, GPL-3.0-only here |
+
+Licenses as stated in each upstream repository (license file, source
+headers or README) on 2026-11-18. "none stated" means the repository has no
+license file or notice.
 
 Disable the originals before you enable Shell Tweaks. Running both patches
 the same objects twice.
@@ -514,12 +518,17 @@ journalctl --user -f -o cat | grep shell-tweaks
 
 GPL-3.0-only, see [LICENSE](LICENSE).
 
-Contains logic ported from:
+Contains logic ported from the extensions listed under
+[Replaced extensions](#replaced-extensions), with their licenses:
 
 - Just Perfection (GPL-3.0-only, Javad Rahmatzadeh)
+- gnome-ui-tune (GPL-3.0, axxapy)
 - Custom Hot Corners - Extended (GPL-3.0, GdH)
+- click-to-close-overview (GPL-2.0-or-later, l3nn4rt)
 - Edit Desktop Files (GPL-2.0-or-later, Dannflower)
-- app-grid-tuner, app-hider, gnome-ui-tune, scroll-workspaces,
-  start-overlay-in-application-view and click-to-close-overview
+- app-hider (GPL-2.0, LynithDev)
+- app-grid-tuner (MIT, m-lab)
+- start-overlay-in-application-view (Hexcz) and scroll-workspaces
+  (timbertson), which state no license
 
 Thanks to their authors.

@@ -69,10 +69,6 @@ license file or notice.
 Disable the originals before you enable Shell Tweaks. Running both patches
 the same objects twice.
 
-Tiling Shell is not merged. It is large, has no conflicts left after the
-merge, and is better kept upstream. Shell Tweaks only restores the Alt+F5
-binding that Tiling Shell clears (see [Windows](#windows)).
-
 ## Design principles
 
 1. **Inert at defaults.** A feature installs its patch only while its value
